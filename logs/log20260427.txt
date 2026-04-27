@@ -1,0 +1,102 @@
+2026-04-27 11:02:18.846 +05:30 [INF] Now listening on: https://localhost:7204
+2026-04-27 11:02:19.090 +05:30 [INF] Now listening on: http://localhost:5264
+2026-04-27 11:02:19.366 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-27 11:02:19.375 +05:30 [INF] Hosting environment: Development
+2026-04-27 11:02:19.379 +05:30 [INF] Content root path: C:\Users\joswin.mendonca\source\repos\NotificationServiceAPI\NotificationServiceAPI
+2026-04-27 11:02:32.785 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7204/swagger/index.html - null null
+2026-04-27 11:02:35.902 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7204/swagger/index.html - 304 null null 3170.5438ms
+2026-04-27 11:02:36.257 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7204/swagger/swagger-ui-bundle.js - null null
+2026-04-27 11:02:36.176 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7204/swagger/swagger-ui.css - null null
+2026-04-27 11:02:36.214 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7204/swagger/index.css - null null
+2026-04-27 11:02:36.205 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7204/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-27 11:02:36.261 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7204/swagger/swagger-ui-standalone-preset.js - null null
+2026-04-27 11:02:36.320 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7204/_vs/browserLink - null null
+2026-04-27 11:02:36.358 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7204/swagger/index.js - null null
+2026-04-27 11:02:36.546 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7204/swagger/swagger-ui.css - 304 null null 369.8359ms
+2026-04-27 11:02:36.546 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7204/swagger/swagger-ui-standalone-preset.js - 304 null null 284.6989ms
+2026-04-27 11:02:36.610 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7204/swagger/swagger-ui-bundle.js - 304 null null 353.8123ms
+2026-04-27 11:02:36.577 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7204/swagger/index.css - 304 null null 362.9899ms
+2026-04-27 11:02:36.615 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7204/swagger/index.js - 304 null null 257.059ms
+2026-04-27 11:02:36.585 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7204/_framework/aspnetcore-browser-refresh.js - 200 14949 application/javascript; charset=utf-8 380.0696ms
+2026-04-27 11:02:37.060 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7204/_vs/browserLink - 200 null text/javascript; charset=UTF-8 740.2515ms
+2026-04-27 11:02:37.815 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7204/swagger/v1/swagger.json - null null
+2026-04-27 11:02:37.906 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7204/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 91.2641ms
+2026-04-27 11:03:02.270 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7204/api/Notification/send - application/json 40
+2026-04-27 11:03:02.339 +05:30 [INF] Executing endpoint 'NotificationController.Send (NotificationServiceAPI)'
+2026-04-27 11:03:02.539 +05:30 [INF] Route matched with {action = "Send", controller = "Notification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Send(NotificationServiceAPI.DTOs.NotificationDTO) on controller NotificationController (NotificationServiceAPI).
+2026-04-27 11:03:03.489 +05:30 [INF] [Admin] Sending notification
+2026-04-27 11:03:14.771 +05:30 [INF] Executed DbCommand (337ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Notifications] ([CreatedDate], [Message], [Status])
+OUTPUT INSERTED.[NotificationId]
+VALUES (@p0, @p1, @p2);
+2026-04-27 11:03:15.081 +05:30 [INF] [Admin] Send completed in 11592 ms
+2026-04-27 11:03:15.136 +05:30 [INF] Executing OkObjectResult, writing value of type 'NotificationServiceAPI.Models.Notification'.
+2026-04-27 11:03:15.250 +05:30 [INF] Executed action NotificationController.Send (NotificationServiceAPI) in 12664.0725ms
+2026-04-27 11:03:15.263 +05:30 [INF] Executed endpoint 'NotificationController.Send (NotificationServiceAPI)'
+2026-04-27 11:03:15.356 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7204/api/Notification/send - 200 null application/json; charset=utf-8 13086.9726ms
+2026-04-27 11:03:22.573 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7204/api/Notification - null null
+2026-04-27 11:03:22.589 +05:30 [INF] Executing endpoint 'NotificationController.GetAll (NotificationServiceAPI)'
+2026-04-27 11:03:22.628 +05:30 [INF] Route matched with {action = "GetAll", controller = "Notification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NotificationController (NotificationServiceAPI).
+2026-04-27 11:03:22.646 +05:30 [INF] [Admin] Fetching notifications
+2026-04-27 11:03:24.061 +05:30 [INF] Executed DbCommand (62ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NotificationId], [n].[CreatedDate], [n].[Message], [n].[Status]
+FROM [Notifications] AS [n]
+2026-04-27 11:03:24.153 +05:30 [INF] [Admin] Fetch completed in 1506 ms
+2026-04-27 11:03:24.170 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NotificationServiceAPI.Models.Notification, NotificationServiceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-27 11:03:24.185 +05:30 [INF] Executed action NotificationController.GetAll (NotificationServiceAPI) in 1547.5476ms
+2026-04-27 11:03:24.200 +05:30 [INF] Executed endpoint 'NotificationController.GetAll (NotificationServiceAPI)'
+2026-04-27 11:03:24.212 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7204/api/Notification - 200 null application/json; charset=utf-8 1638.4724ms
+2026-04-27 11:09:27.286 +05:30 [INF] Now listening on: https://localhost:7204
+2026-04-27 11:09:27.453 +05:30 [INF] Now listening on: http://localhost:5264
+2026-04-27 11:09:27.614 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-27 11:09:27.617 +05:30 [INF] Hosting environment: Development
+2026-04-27 11:09:27.619 +05:30 [INF] Content root path: C:\Users\joswin.mendonca\source\repos\NotificationServiceAPI\NotificationServiceAPI
+2026-04-27 11:09:32.252 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7204/swagger/index.html - null null
+2026-04-27 11:09:32.993 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7204/swagger/index.html - 304 null null 762.1619ms
+2026-04-27 11:09:33.056 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7204/swagger/swagger-ui.css - null null
+2026-04-27 11:09:33.063 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7204/swagger/swagger-ui-standalone-preset.js - null null
+2026-04-27 11:09:33.065 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7204/swagger/swagger-ui-bundle.js - null null
+2026-04-27 11:09:33.063 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7204/swagger/index.css - null null
+2026-04-27 11:09:33.063 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7204/_framework/aspnetcore-browser-refresh.js - null null
+2026-04-27 11:09:33.120 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7204/swagger/index.js - null null
+2026-04-27 11:09:33.126 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7204/_vs/browserLink - null null
+2026-04-27 11:09:33.249 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7204/swagger/index.js - 304 null null 163.9299ms
+2026-04-27 11:09:33.266 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7204/swagger/swagger-ui.css - 304 null null 210.1203ms
+2026-04-27 11:09:33.266 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7204/swagger/swagger-ui-standalone-preset.js - 304 null null 203.0701ms
+2026-04-27 11:09:33.273 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7204/swagger/swagger-ui-bundle.js - 304 null null 207.0724ms
+2026-04-27 11:09:33.266 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7204/swagger/index.css - 304 null null 203.9536ms
+2026-04-27 11:09:33.293 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7204/_framework/aspnetcore-browser-refresh.js - 200 14949 application/javascript; charset=utf-8 229.8383ms
+2026-04-27 11:09:33.534 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7204/_vs/browserLink - 200 null text/javascript; charset=UTF-8 407.7547ms
+2026-04-27 11:09:33.941 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7204/swagger/v1/swagger.json - null null
+2026-04-27 11:09:33.957 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7204/swagger/favicon-32x32.png - null null
+2026-04-27 11:09:33.997 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7204/swagger/favicon-32x32.png - 304 null null 39.6585ms
+2026-04-27 11:09:34.024 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7204/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 83.6881ms
+2026-04-27 11:09:49.363 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7204/api/Notification/send - application/json 29
+2026-04-27 11:09:49.432 +05:30 [INF] Executing endpoint 'NotificationController.Send (NotificationServiceAPI)'
+2026-04-27 11:09:49.560 +05:30 [INF] Route matched with {action = "Send", controller = "Notification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Send(NotificationServiceAPI.DTOs.NotificationDTO) on controller NotificationController (NotificationServiceAPI).
+2026-04-27 11:09:50.309 +05:30 [INF] [Admin] Sending notification
+2026-04-27 11:09:54.988 +05:30 [INF] Executed DbCommand (237ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Notifications] ([CreatedDate], [Message], [Status])
+OUTPUT INSERTED.[NotificationId]
+VALUES (@p0, @p1, @p2);
+2026-04-27 11:09:55.242 +05:30 [INF] [Admin] Send completed in 4932 ms
+2026-04-27 11:09:55.285 +05:30 [INF] Executing OkObjectResult, writing value of type 'NotificationServiceAPI.Models.Notification'.
+2026-04-27 11:09:55.347 +05:30 [INF] Executed action NotificationController.Send (NotificationServiceAPI) in 5759.1272ms
+2026-04-27 11:09:55.359 +05:30 [INF] Executed endpoint 'NotificationController.Send (NotificationServiceAPI)'
+2026-04-27 11:09:55.401 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7204/api/Notification/send - 200 null application/json; charset=utf-8 6036.761ms
+2026-04-27 11:10:04.738 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7204/api/Notification - null null
+2026-04-27 11:10:04.759 +05:30 [INF] Executing endpoint 'NotificationController.GetAll (NotificationServiceAPI)'
+2026-04-27 11:10:04.793 +05:30 [INF] Route matched with {action = "GetAll", controller = "Notification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NotificationController (NotificationServiceAPI).
+2026-04-27 11:10:04.817 +05:30 [INF] [Admin] Fetching notifications
+2026-04-27 11:10:05.907 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NotificationId], [n].[CreatedDate], [n].[Message], [n].[Status]
+FROM [Notifications] AS [n]
+2026-04-27 11:10:05.969 +05:30 [INF] [Admin] Fetch completed in 1151 ms
+2026-04-27 11:10:05.984 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NotificationServiceAPI.Models.Notification, NotificationServiceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-27 11:10:05.997 +05:30 [INF] Executed action NotificationController.GetAll (NotificationServiceAPI) in 1188.0634ms
+2026-04-27 11:10:06.005 +05:30 [INF] Executed endpoint 'NotificationController.GetAll (NotificationServiceAPI)'
+2026-04-27 11:10:06.019 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7204/api/Notification - 200 null application/json; charset=utf-8 1281.1991ms
